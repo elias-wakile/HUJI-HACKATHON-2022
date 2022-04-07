@@ -1,6 +1,16 @@
 import enum
 
-class clothingType(enum.Enum):
+import pandas as pd
+from PIL import Image
+import scipy
+from scipy import cluster
+import numpy as np
+from scipy.spatial import distance
+import tensorflow as tf
+from tensorflow import keras
+import matplotlib as plt
+
+class ClothingType(enum.Enum):
     shortSleeve = 1
     longSleeve = 2
     dressShirt = 3
@@ -24,12 +34,7 @@ class clothingType(enum.Enum):
     elegantShoes = 21
     cap = 22
     hat = 23
-
-class selectBox(enum.Enum):
-    sportive = 1
-    comfy = 2
-    casual = 3
-    elegant = 4
+    umbrella = 24
 
 class FabricType(enum.Enum):
     cotton = 1
@@ -47,15 +52,41 @@ class ItemShape(enum.Enum):
     average = 3
     loose = 4
 
-class itemThickness(enum.Enum):
+class ItemThickness(enum.Enum):
     light = 1
     medium = 2
     thick = 3
 
-
+def findFabricColor(picture_path : str, clusterParameter=3):
+    imageMatrix = plt.image.imread(picture_path)[70:370, 70:370, :]
+    df = pd.DataFrame()
+    df['r'] = pd.Series(imageMatrix[:,:,0].flatten())
+    df['g'] = pd.Series(imageMatrix[:,:,1].flatten())
+    df['b'] = pd.Series(imageMatrix[:,:,2].flatten())
+    df['processedR'] = scipy.cluster.vq.whiten(df['r'])
+    df['processedG'] = scipy.cluster.vq.whiten(df['g'])
+    df['processedB'] = scipy.cluster.vq.whiten(df['b'])
+    clusterNodes, distortionParameter = scipy.cluster.vq.kmeans(df[['processedR','processedG','processedB']], clusterParameter)
+    extractedColors = []
+    stdvR, stdvG, stdvB = df[['r','g','b']].std()
+    for color in clusterNodes:
+        extractedColors.append((stdvR*color[0], stdvG*color[1], stdvB*color[2]))
+    if (distance.euclidean(extractedColors[1],extractedColors[2]) < 16) or\
+            (distance.euclidean(extractedColors[0],extractedColors[2]) < 16):
+        extractedColors.remove(extractedColors[2])
+    if distance.euclidean(extractedColors[0],extractedColors[1]) < 16:
+        extractedColors.remove(extractedColors[1])
+    return extractedColors
 
 class Item:
-    def __init__(self, picture_path: str, fabric_path: str, clothing_type, color: str):
-        self.color = color
+    def __init__(self, picture_path: str,
+                 fabric_path: str,
+                 clothing_type : ClothingType,
+                 item_thickness : ItemThickness,
+                 item_shape : ItemShape):
         self.fabric_path = fabric_path
+        self.colors = findFabricColor(picture_path)
         self.picture_path = picture_path
+        self.clothing_type = clothing_type
+        self.item_thickness = item_thickness
+        self.item_shape = item_shape
