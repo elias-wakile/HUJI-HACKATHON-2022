@@ -1,10 +1,9 @@
 import enum
 
-class selectBox(enum.Enum):
-    sportive = 1
-    comfy = 2
-    casual = 3
-    elegant = 4
+class dressingType(enum.Enum):
+    comfy = 1
+    casual = 2
+    elegant = 3
 
 class Outfit:
     def __init__(self, weather, dressingType):
