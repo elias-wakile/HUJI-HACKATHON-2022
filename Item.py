@@ -11,30 +11,16 @@ from tensorflow import keras
 import matplotlib as plt
 
 class ClothingType(enum.Enum):
-    shortSleeve = 1
-    longSleeve = 2
-    dressShirt = 3
-    Hoodie = 4
-    sweater = 5
-    lightJacket = 6
-    jacket = 7
-    coat = 8
-    trenchCoat = 9
-    suit = 10
-    vest = 11
-    tights = 12
-    pants = 13
-    jeans = 14
-    elegantPants = 15
-    skirt = 16
-    dress = 17
-    dungarees = 18
-    sportiveShoes = 19
-    casualShoes = 20
-    elegantShoes = 21
-    cap = 22
-    hat = 23
-    umbrella = 24
+    Tshirt = 0
+    Trouser = 1
+    Pullover = 2
+    Dress = 3
+    Coat = 4
+    Sandal = 5
+    Shirt = 6
+    Sneaker = 7
+    Bag = 8
+    Boot = 9
 
 class FabricType(enum.Enum):
     cotton = 1
@@ -45,6 +31,7 @@ class FabricType(enum.Enum):
     silk = 6
     fleece = 7
     linen = 8
+    lycra = 9
 
 class ItemShape(enum.Enum):
     skinny = 1
