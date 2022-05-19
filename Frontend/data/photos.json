@@ -1,0 +1,40 @@
+{
+    "data":[
+        {
+            "itemImageSrc": "https://img1.g-star.com/product/c_fill,f_auto,h_630,q_80/v1614677580/D08512-8415-110-M05/g-star-raw-raw-graphic-slim-t-shirt-white.jpg",
+            "thumbnailImageSrc": "https://img1.g-star.com/product/c_fill,f_auto,h_630,q_80/v1614677580/D08512-8415-110-M05/g-star-raw-raw-graphic-slim-t-shirt-white.jpg",
+            "alt": "Description for Image 1",
+            "title": "Shirt"
+        },
+        {
+            "itemImageSrc": "https://media.dior.com/couture/ecommerce/media/catalog/product/9/e/1594849779_043J615A0589_C980_E08_GHC.jpg?imwidth=800",
+            "thumbnailImageSrc": "https://media.dior.com/couture/ecommerce/media/catalog/product/9/e/1594849779_043J615A0589_C980_E08_GHC.jpg?imwidth=800",
+            "alt": "Description for Image 2",
+            "title": "Black Shirt"
+        },
+        {
+            "itemImageSrc": "https://www.bewooden.com/picture/5d1ce293a3a7c/w960/0-geomess-socks.jpg",
+            "thumbnailImageSrc": "https://www.bewooden.com/picture/5d1ce293a3a7c/w960/0-geomess-socks.jpg",
+            "alt": "Description for Image 3",
+            "title": "Ugly Socks"
+        },
+        {
+            "itemImageSrc": "https://imgs.michaels.com/MAM/assets/1/726D45CA1C364650A39CD1B336F03305/img/91F89859AE004153A24E7852F8666F0F/10093625_r.jpg?fit=inside|540:540",
+            "thumbnailImageSrc": "https://imgs.michaels.com/MAM/assets/1/726D45CA1C364650A39CD1B336F03305/img/91F89859AE004153A24E7852F8666F0F/10093625_r.jpg?fit=inside|540:540",
+            "alt": "Description for Image 4",
+            "title": "Pink Shirt"
+        },
+        {
+            "itemImageSrc": "https://media.everlane.com/image/upload/c_fill,dpr_2,f_auto,g_face:center,q_auto,w_auto/v1/i/2027395f_3bc4.jpg",
+            "thumbnailImageSrc": "https://media.everlane.com/image/upload/c_fill,dpr_2,f_auto,g_face:center,q_auto,w_auto/v1/i/2027395f_3bc4.jpg",
+            "alt": "Description for Image 5",
+            "title": "Brown pants"
+        },
+        {
+            "itemImageSrc": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwfd8149b8/images/hi-res/30689_SMDB.jpg?sw=350&sh=350&sfrm=png&q=95&bgcolor=f5f5f5",
+            "thumbnailImageSrc": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwfd8149b8/images/hi-res/30689_SMDB.jpg?sw=350&sh=350&sfrm=png&q=95&bgcolor=f5f5f5",
+            "alt": "Description for Image 6",
+            "title": "Darkblue Pants"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "data": [
+        {"id": "1000","code": "f230fh0g3","name": "White Shirt","description": "Product Description","image": "https://img1.g-star.com/product/c_fill,f_auto,h_630,q_80/v1614677580/D08512-8415-110-M05/g-star-raw-raw-graphic-slim-t-shirt-white.jpg","price": 0,"category": "Accessories","quantity": 24,"inventoryStatus":"","rating": 5},
+        {"id": "1004","code": "h456wer53","name": "Colorful Socks","description": "Product Description","image": "https://www.bewooden.com/picture/5d1ce293a3a7c/w960/0-geomess-socks.jpg","price": 0,"category": "Accessories","quantity": 73,"inventoryStatus":"","rating": 4},
+        {"id": "1003","code": "244wgerg2","name": "Black T-Shirt","description": "Product Description","image": "https://media.dior.com/couture/ecommerce/media/catalog/product/9/e/1594849779_043J615A0589_C980_E08_GHC.jpg?imwidth=800","price": 0,"category": "Clothing","quantity": 25,"inventoryStatus":"","rating": 5},
+        {"id": "1005","code": "av2231fwg","name": "Pink Shirt","description": "Product Description","image": "https://imgs.michaels.com/MAM/assets/1/726D45CA1C364650A39CD1B336F03305/img/91F89859AE004153A24E7852F8666F0F/10093625_r.jpg","price": 0,"category": "Accessories","quantity": 0,"inventoryStatus":"CK","rating": 4},
+        {"id": "1006","code": "bib36pfvm","name": "Brown Trousers","description": "Product Description","image": "https://media.everlane.com/image/upload/c_fill,dpr_2,f_auto,g_face:center,q_auto,w_auto/v1/i/2027395f_3bc4.jpg","price": 0,"category": "Accessories","quantity": 5,"inventoryStatus":"","rating": 3}
+    ]
+}
