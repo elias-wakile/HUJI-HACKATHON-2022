@@ -45,7 +45,7 @@ class ItemThickness(enum.Enum):
     thick = 3
 
 def findFabricColor(picture_path : str, clusterParameter=3):
-    imageMatrix = plt.image.imread(picture_path)[70:370, 70:370, :]
+    imageMatrix = plt.image.imread(picture_path)[190:290, 190:290, :]
     df = pd.DataFrame()
     df['r'] = pd.Series(imageMatrix[:,:,0].flatten())
     df['g'] = pd.Series(imageMatrix[:,:,1].flatten())
@@ -66,14 +66,7 @@ def findFabricColor(picture_path : str, clusterParameter=3):
     return extractedColors
 
 class Item:
-    def __init__(self, picture_path: str,
-                 fabric_path: str,
-                 clothing_type : ClothingType,
-                 item_thickness : ItemThickness,
-                 item_shape : ItemShape):
-        self.fabric_path = fabric_path
+    def __init__(self, picture_path , clothing_type):
         self.colors = findFabricColor(picture_path)
         self.picture_path = picture_path
         self.clothing_type = clothing_type
-        self.item_thickness = item_thickness
-        self.item_shape = item_shape
